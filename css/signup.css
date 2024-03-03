@@ -1,0 +1,164 @@
+/*All*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Body*/
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #050505;
+}
+
+/*Container */
+.container{
+    width: fit-content;
+    height: fit-content;
+    background: #EFEFEF;
+    padding: 61px 115px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 30px 100px 0px rgba(165,165,165,0.25);
+}
+
+/*Header*/
+.container .title{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 32px;
+}
+
+/*Social Links*/
+.container .social-links{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 32px;
+}
+
+/*Input*/
+.input-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.input-box .input-group{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-box .input-group > input{
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 24px;
+    padding: 6px 36px;
+    border-bottom: 1px solid #000;
+}
+
+.input-box .input-group .placeholder{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #AAAAAA;
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+}
+
+.input-box .input-group .placeholder > label{
+    transition: all .2s;
+}
+
+.input-box .input-group input:focus ~ .placeholder > label,
+.input-box .input-group input:valid ~ .placeholder > label{
+    transform: translateY(-20px);
+    font-size: 12px;
+}
+
+/*Button*/
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn > .btn{
+    background: #050505;
+    color: #fff;
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all .3s;
+}
+
+.submit-btn > .btn:hover{
+    background: #AAAAAA;
+    color: #fff;
+}
+
+/*SignUp*/
+.sign-up{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 32px;
+}
+
+.sign-up span > a{  
+    color: #000;
+}
+
+@media (max-width: 600px){
+    body{
+        width: 100%;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+        padding: 70px;
+    }
+    .container .title{
+        font-size: 34px;
+    }
+    .input-box .input-group .placeholder{
+        font-size: 24px;
+    }
+    .sign-up{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 390px){
+    body{
+        width: 100%;
+    }
+    .container{
+        width: 90%;
+        height: auto;
+        padding: 70px;
+    }
+    .container .title{
+        font-size: 32px;
+    }
+    .input-box .input-group .placeholder{
+        font-size: 22px;
+    }
+    .sign-up{
+        font-size: 20px;
+    }
+}
